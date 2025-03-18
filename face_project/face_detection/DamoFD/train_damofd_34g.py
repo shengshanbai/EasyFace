@@ -19,7 +19,7 @@ from modelscope.utils.test_utils import DistributedTestCase, test_level
 def _setup():
     model_id = 'damo/cv_ddsar_face-detection_iclr23-damofd-34G'
     # mini dataset only for unit test, remove '_mini' for full dataset.
-    ms_ds_widerface = MsDataset.load('WIDER_FACE_mini', namespace='shaoxuan')
+    ms_ds_widerface = MsDataset.load('WIDER_FACE', namespace='shaoxuan')
 
     data_path = ms_ds_widerface.config_kwargs['split_config']
     train_dir = data_path['train']
